@@ -151,13 +151,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     video.srcObject = stream;
 
     // Load Models
-    await faceapi.loadSsdMobilenetv1Model('/models')
+    await faceapi.loadSsdMobilenetv1Model('models')
     // accordingly for the other models:
-    // await faceapi.loadTinyFaceDetectorModel('/models')
-    // await faceapi.loadMtcnnModel('/models')
-    await faceapi.loadFaceLandmarkModel('/models')
-    // await faceapi.loadFaceLandmarkTinyModel('/models')
-    // await faceapi.loadFaceRecognitionModel('/models')
-    await faceapi.loadFaceExpressionModel('/models')
+    // await faceapi.loadTinyFaceDetectorModel('models')
+    // await faceapi.loadMtcnnModel('models')
+    await faceapi.loadFaceLandmarkModel('models')
+    // await faceapi.loadFaceLandmarkTinyModel('models')
+    // await faceapi.loadFaceRecognitionModel('models')
+    await faceapi.loadFaceExpressionModel('models')
 
 });
