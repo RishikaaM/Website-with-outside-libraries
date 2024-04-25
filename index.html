@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Prompt Screen</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Your CSS styles here */
+        .selected::after {
+            content: '\2714';
+            /* Unicode for checkmark */
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="loader-container">
+            <div class="loader"></div>
+            <h2>Loading</h2>
+        </div>
+        <img id="background-image" class="background-image" src="images/backgrounds/nature.jpg" alt="Background Image">
+        <div class="content">
+            <h1>Welcome to Face Expression Robot</h1>
+            <form id="prompt-form">
+                <video id="cam-video" style="" width="420" height="240" autoplay></video>
+                <canvas id="captured-image" width="420" height="240" hidden></canvas>
+                <br>
+                <img id="image" hidden />
+                <button id="capture-btn" type="button" onclick="onDetectExpressionsClick()">Detect Gesture</button>
+            </form>
+            <br>
+            <br>
+            <div id="results" style="width: 50%;" hidden>
+
+                <div>
+                    <label for="neutral" style="font-size: larger;">Neutral 😐</label>
+
+                    <div class="w3-light-grey w3-round">
+                        <div id="neutral-progress" class="w3-container w3-round">0%
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="happy" style="font-size: larger;">Happy 😊</label>
+                    <div class="w3-light-grey w3-round-large">
+                        <div id="happy-progress" class="w3-container w3-round-large">
+                            0%</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="sad" style="font-size: larger;">Sad 😢</label>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div id="sad-progress" class="w3-container w3-round-xlarge">
+                            0%</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="angry" style="font-size: larger;">Angry 😡</label>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div id="angry-progress" class="w3-container w3-round-xlarge">0%</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="fearful" style="font-size: larger;">Fearful 😨</label>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div id="fearful-progress" class="w3-container w3-round-xlarge">0%</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="disgusted" style="font-size: larger;">Disgusted 🤢</label>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div id="disgusted-progress" class="w3-container w3-round-xlarge">0%</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="surprised" style="font-size: larger;">Surprised 😮</label>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div id="surprised-progress" class="w3-container w3-round-xlarge">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/face-api.min.js"> </script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
